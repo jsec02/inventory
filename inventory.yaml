@@ -1,0 +1,268 @@
+machines:
+  wsl:
+    packages:
+      yay:
+        - package1
+  pi:
+    packages:
+      apt:
+        - package1
+      pip3:
+        - package2
+  kali:
+    packages:
+      apt:
+        - package1
+      pip2:
+        - package2
+      pip3:
+        - package3
+atuin:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/atuin
+  target: /home/master/.config/atuin
+  backup_keep: 7
+autostart:
+  machines:
+    - kali
+  paths:
+    - /home/master/.config/autostart/deskflow.desktop
+    - /home/master/.config/autostart/redshift.desktop
+    - /home/master/.config/autostart/xset.desktop
+  backup_keep: 1
+bash:
+  machines:
+    - wsl
+    - pi
+    - kali
+  path: /home/master/bash
+  backup_keep: 7
+databases:
+  machines:
+    - wsl
+    - pi
+  path: /home/master/databases
+  backup_keep: 7
+direnv:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/direnv
+  target: /home/master/.config/direnv
+  backup_keep: 1
+dotfiles:
+  machines:
+    - wsl
+    - pi
+    - kali
+  path: /home/master/dotfiles
+  backup_keep: 7
+fzf:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/fzf
+  target: /home/master/.config/fzf
+  backup_keep: 7
+git:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/git/.gitconfig
+  target: /home/master/.gitconfig
+  backup_keep: 1
+helix:
+  machines:
+    - wsl
+  source: /home/master/dotfiles/helix
+  target: /home/master/.config/helix
+  backup_keep: 7
+history:
+  machines:
+    - wsl
+    - pi
+    - kali
+  path: /home/master/.local/share/atuin/history.db
+  backup_keep: 7
+homepage:
+  machines:
+    - pi
+  source: /home/master/dotfiles/homepage
+  target: /home/master/.config/homepage
+  backup_keep: 1
+icons:
+  machines:
+    - wsl
+  path: /home/master/icons
+  backup_keep: 1
+kakoune:
+  machines:
+    - wsl
+  source: /home/master/dotfiles/kak
+  target: /home/master/.config/kak
+  backup_keep: 7
+lightdm:
+  machines:
+    - kali
+  source: /home/master/dotfiles/lightdm/lightdm.conf
+  target: /etc/lightdm/lightdm.conf
+  backup_keep: 1
+  sudo: true
+navidrome:
+  machines:
+    - pi
+  source: /home/master/dotfiles/navidrome
+  target: /etc/navidrome
+  backup_keep: 1
+  sudo: true
+networkmanager:
+  machines:
+    - kali
+  source: /home/master/dotfiles/networkmanager/NetworkManager.conf
+  target: /etc/NetworkManager/NetworkManager.conf
+  backup_keep: 1
+  sudo: true
+nftables:
+  machines:
+    - wsl
+    - pi
+    - kali
+  path: /etc/nftables.conf
+  backup_keep: 1
+  sudo: true
+nvim:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/nvim
+  target: /home/master/.config/nvim
+  backup_keep: 7
+poc:
+  machines:
+    - wsl
+  path: /home/master/poc
+  backup_keep: 7
+powershell:
+  machines:
+    - wsl
+  path: /home/master/powershell
+  backup_keep: 7
+python:
+  machines:
+    - wsl
+    - pi
+  path: /home/master/python
+  backup_keep: 7
+qgmlwy:
+  machines:
+    - wsl
+  path: /home/master/qgmlwy
+  backup_keep: 7
+redshift:
+  machines:
+    - kali
+  source: /home/master/dotfiles/redshift
+  target: /home/master/.config/redshift
+  backup_keep: 1
+resolv:
+  machines:
+    - wsl
+    - kali
+    - pi
+  path: /etc/resolv.conf
+  backup_keep: 1
+  sudo: true
+services:
+  machines:
+    - pi
+  paths:
+    - /etc/systemd/system/riven-sniper.service
+    - /etc/systemd/system/qbittorrent-nox.service
+    - /etc/systemd/system/glances-web.service
+  backup_keep: 1
+  sudo: true
+sql:
+  machines:
+    - wsl
+  path: /home/master/sql
+  backup_keep: 7
+sqlite:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/sqlite/.sqliterc
+  target: /home/master/.sqliterc
+  backup_keep: 1
+ssh:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/ssh
+  paths:
+    - /home/master/.ssh
+    - /mnt/c/Users/master/.ssh
+  backup_keep: 1
+vault:
+  machines:
+    - wsl
+  path: /home/master/vault
+  backup_keep: 7
+wireguard:
+  machines:
+    - pi
+  path: /etc/wireguard
+  backup_keep: 1
+  sudo: true
+wsl:
+  machines:
+    - wsl
+  paths:
+    - /etc/wsl.conf
+    - /mnt/c/Users/master/.wslconfig
+  backup_keep: 1
+  sudo: true
+wt:
+  machines:
+    - wsl
+  path: /mnt/c/Users/master/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+  backup_keep: 7
+yazi:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/yazi
+  target: /home/master/.config/yazi
+  backup_keep: 7
+zellij:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/zellij
+  target: /home/master/.config/zellij
+  paths:
+    - /home/master/.config/zellij
+    - /mnt/c/Users/master/AppData/Roaming/Zellij/config
+  backup_keep: 7
+zsh:
+  machines:
+    - wsl
+    - pi
+    - kali
+  source: /home/master/dotfiles/zsh
+  paths:
+    - /home/master/.zshrc
+    - /home/master/.zshenv
+    - /home/master/.zshenv.local
+    - /home/master/.zprofile
+  backup_keep: 7
