@@ -27,6 +27,9 @@ def parse_args() -> argparse.Namespace:
     packages.add_argument("machine")
     packages.add_argument("package_manager")
 
+    package_managers = subparsers.add_parser("package_managers")
+    package_managers.add_argument("machine")
+
     return parser.parse_args()
 
 
@@ -74,6 +77,14 @@ def get_packages(inventory: dict, machine: str, package_manager: str) -> None:
     print(*inventory["machines"][machine]["package_managers"][package_manager])
 
 
+def get_package_managers(inventory: dict, machine: str) -> None:
+    if machine not in inventory["machines"]:
+        print(f"Unknown machine: {machine}", file=sys.stderr)
+        sys.exit(1)
+
+    print(*inventory["machines"][machine]["package_managers"].keys())
+
+
 def main() -> None:
     inventory = load_inventory()
 
@@ -90,6 +101,9 @@ def main() -> None:
 
     elif args.command == "packages":
         get_packages(inventory, args.machine, args.package_manager)
+
+    elif args.command == "package_managers":
+        get_package_managers(inventory, args.machine)
 
 
 if __name__ == "__main__":
