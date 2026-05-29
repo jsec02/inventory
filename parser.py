@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_inventory() -> dict:
-    with open("/home/master/inventory/inventory.yaml", "r") as f:
+    with open(Path.home() / "inventory" / "inventory.yaml") as f:
         return yaml.safe_load(f)
 
 
