@@ -87,16 +87,6 @@ def get_package_managers(inventory: dict, machine: str) -> None:
     print(*inventory["machines"][machine]["package_managers"].keys())
 
 
-def get_all_package_managers(inventory: dict) -> None:
-    package_managers = {
-        package_manager
-        for machine in inventory["machines"].values()
-        for package_manager in machine["package_managers"].keys()
-    }
-
-    print(*package_managers)
-
-
 def main() -> None:
     inventory = load_inventory()
 
@@ -116,9 +106,6 @@ def main() -> None:
 
     elif args.command == "package_managers":
         get_package_managers(inventory, args.machine)
-
-    elif args.command == "all_package_managers":
-        get_all_package_managers(inventory)
 
 
 if __name__ == "__main__":
