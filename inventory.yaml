@@ -235,6 +235,13 @@ machines:
         - impacket
       pip3:
         - requests
+inventory:
+  machines:
+    - wsl
+    - pi
+    - kali
+  path: /home/master/inventory
+  backup_keep: 7
 atuin:
   machines:
     - wsl
