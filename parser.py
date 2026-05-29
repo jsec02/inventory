@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_inventory() -> dict:
-    with open("test.yaml", "r") as f:
+    with open("inventory.yaml", "r") as f:
         return yaml.safe_load(f)
 
 
