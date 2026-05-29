@@ -65,13 +65,13 @@ def get_packages(inventory: dict, machine: str, package_manager: str) -> None:
         print(f"Unknown machine: {machine}", file=sys.stderr)
         sys.exit(1)
 
-    if package_manager not in inventory["machines"][machine]["packages"]:
+    if package_manager not in inventory["machines"][machine]["package_managers"]:
         print(
             f"Invalid package manager for {machine}: {package_manager}", file=sys.stderr
         )
         sys.exit(1)
 
-    print(*inventory["machines"][machine]["packages"][package_manager])
+    print(*inventory["machines"][machine]["package_managers"][package_manager])
 
 
 def main() -> None:

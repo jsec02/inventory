@@ -1,6 +1,6 @@
 machines:
   wsl:
-    packages:
+    package_managers:
       yay:
         - asciiquarium
         - aspell
@@ -82,7 +82,7 @@ machines:
       pip3:
         - pyyaml
   pi:
-    packages:
+    package_managers:
       apt:
         - build-essential
         - curl
@@ -136,7 +136,7 @@ machines:
         - glances[web]
         - pyyaml
   kali:
-    packages:
+    package_managers:
       apt:
         - awscli
         - binwalk
