@@ -79,6 +79,7 @@ machines:
         - yt-dlp
         - zellij
         - zsh
+        - atuin
       pip3:
         - pyyaml
   pi:
