@@ -44,14 +44,20 @@ def get_machines(inventory: dict) -> None:
     print(*inventory["machines"].keys())
 
 
-def get_paths(inventory: dict, machine: str) -> None:
+def get_paths(inventory: dict, machine: str, tag=None) -> None:
     if machine not in inventory["machines"]:
         print(f"Unknown machine: {machine}", file=sys.stderr)
         sys.exit(1)
 
-    for key, value in inventory.items():
-        if "paths" in value and machine in value["machines"]:
-            print(key, *value["paths"])
+    if tag is None:
+        for key, value in inventory.items():
+            if "paths" in value and machine in value["machines"]:
+                print(key, *value["paths"])
+    else:
+        if tag not in inventory or "paths" not in inventory[tag]:
+            print(f"Unknown tag: {tag}", file=sys.stderr)
+            sys.exit(1)
+        print(*inventory[tag]["paths"])
 
 
 def get_links(inventory: dict, machine: str) -> None:
