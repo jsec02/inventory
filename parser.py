@@ -83,7 +83,8 @@ def get_packages(inventory: dict, machine: str, package_manager: str) -> None:
         )
         sys.exit(1)
 
-    print(*inventory["machines"][machine]["package_managers"][package_manager])
+    packages = inventory["machines"][machine]["package_managers"][package_manager]
+    [print(package) for package in packages]
 
 
 def get_package_managers(inventory: dict, machine: str) -> None:
