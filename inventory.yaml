@@ -79,6 +79,7 @@ machines:
         - yt-dlp
         - zellij
         - zsh
+        - fastfetch
       pip3:
         - pyyaml
   pi:
