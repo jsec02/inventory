@@ -503,9 +503,7 @@ zsh:
     /home/master/dotfiles/zsh/.zshrc: /home/master/.zshrc
     /home/master/dotfiles/zsh/.zshenv: /home/master/.zshenv
     /home/master/dotfiles/zsh/.zshenv.local: /home/master/.zshenv.local
-    /home/master/dotfiles/zsh/.zprofile: /home/master/.zprofile
   paths:
     - /home/master/.zshrc
     - /home/master/.zshenv
     - /home/master/.zshenv.local
-    - /home/master/.zprofile
