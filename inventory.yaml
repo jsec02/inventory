@@ -448,7 +448,7 @@ ssh:
     - pi
     - kali
   links:
-    /home/master/dotfiles/ssh: /home/master/.ssh
+    /home/master/dotfiles/ssh/config: /home/master/.ssh/config
   paths:
     - /home/master/.ssh
     - /mnt/c/Users/master/.ssh
