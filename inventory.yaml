@@ -506,3 +506,10 @@ zsh:
     - /home/master/.zshrc
     - /home/master/.zshenv
     - /home/master/.zshenv.local
+sudo:
+  machines:
+    - wsl
+    - pi
+    - kali
+  paths:
+    - /etc/sudoers.d/mksym
