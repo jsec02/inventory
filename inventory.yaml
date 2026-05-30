@@ -235,6 +235,7 @@ machines:
         - wpscan
         - yq
         - zaproxy
+        - atuin
       pip2:
         - impacket
       pip3:
