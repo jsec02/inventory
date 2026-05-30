@@ -68,7 +68,8 @@ def get_links(inventory: dict, machine: str) -> None:
     for value in inventory.values():
         if "links" in value and machine in value["machines"]:
             for source, target in value["links"].items():
-                print(source, target)
+                sudo = "true" if value.get("sudo") else "false"
+                print(source, target, sudo)
 
 
 def get_packages(inventory: dict, machine: str, package_manager: str) -> None:
