@@ -133,6 +133,7 @@ machines:
         - yt-dlp
         - zip
         - zsh
+        - atuin
       pip3:
         - glances[web]
         - pyyaml
