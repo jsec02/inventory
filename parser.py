@@ -17,6 +17,9 @@ def parse_args() -> argparse.Namespace:
 
     subparsers.add_parser("machines")
 
+    tags = subparsers.add_parser("tags")
+    tags.add_argument("machine")
+
     paths = subparsers.add_parser("paths")
     paths.add_argument("machine")
 
@@ -42,6 +45,12 @@ def load_inventory() -> dict:
 
 def get_machines(inventory: dict) -> None:
     print(*inventory["machines"].keys())
+
+
+def get_tags(inventory: dict, machine: str) -> None:
+    for key, value in inventory.items():
+        if key != "machines" and machine in value["machines"]:
+            print(key)
 
 
 def get_paths(inventory: dict, machine: str, tag=None) -> None:
@@ -84,7 +93,9 @@ def get_packages(inventory: dict, machine: str, package_manager: str) -> None:
         sys.exit(1)
 
     packages = inventory["machines"][machine]["package_managers"][package_manager]
-    [print(package) for package in packages]
+
+    for package in packages:
+        print(package)
 
 
 def get_package_managers(inventory: dict, machine: str) -> None:
@@ -102,6 +113,9 @@ def main() -> None:
 
     if args.command == "machines":
         get_machines(inventory)
+
+    elif args.command == "tags":
+        get_tags(inventory, args.machine)
 
     elif args.command == "paths":
         get_paths(inventory, args.machine)
