@@ -247,6 +247,16 @@ machines:
       pip3:
         - requests
         - pyyaml
+ssh:
+  machines:
+    - wsl
+    - pi
+    - kali
+  links:
+    /home/master/dotfiles/ssh/config: /home/master/.ssh/config
+  paths:
+    - /home/master/.ssh
+    - /mnt/c/Users/master/.ssh
 inventory:
   machines:
     - wsl
@@ -449,16 +459,6 @@ sqlite:
     /home/master/dotfiles/sqlite/.sqliterc: /home/master/.sqliterc
   paths:
     - /home/master/.sqliterc
-ssh:
-  machines:
-    - wsl
-    - pi
-    - kali
-  links:
-    /home/master/dotfiles/ssh/config: /home/master/.ssh/config
-  paths:
-    - /home/master/.ssh
-    - /mnt/c/Users/master/.ssh
 vault:
   machines:
     - wsl
