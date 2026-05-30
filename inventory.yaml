@@ -513,3 +513,4 @@ sudo:
     - kali
   paths:
     - /etc/sudoers.d/mksym
+  sudo: true
