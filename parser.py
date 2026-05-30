@@ -50,7 +50,8 @@ def get_machines(inventory: dict) -> None:
 def get_tags(inventory: dict, machine: str) -> None:
     for key, value in inventory.items():
         if key != "machines" and machine in value["machines"]:
-            print(key)
+            sudo = "true" if value.get("sudo") else "false"
+            print(key, sudo)
 
 
 def get_paths(inventory: dict, machine: str, tag=None) -> None:
