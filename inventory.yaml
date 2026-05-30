@@ -80,6 +80,11 @@ machines:
         - zellij
         - zsh
         - atuin
+        - arm-none-eabi-gcc
+        - arm-none-eabi-binutils
+        - arm-none-eabi-newlib
+        - dfu-util
+        - dos2unix
       pip3:
         - pyyaml
   pi:
