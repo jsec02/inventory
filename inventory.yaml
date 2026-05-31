@@ -248,6 +248,7 @@ machines:
       pip3:
         - requests
         - pyyaml
+        - ipdb
 ssh:
   machines:
     - wsl
