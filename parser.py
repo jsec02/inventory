@@ -65,7 +65,7 @@ def get_paths(inventory: dict, machine: str, *tags: str) -> None:
             if tag not in inventory or "paths" not in inventory[tag]:
                 print(f"Unknown tag: {tag}", file=sys.stderr)
                 sys.exit(1)
-            print(*inventory[tag]["paths"])
+            print(tag, *inventory[tag]["paths"])
     else:
         for key, value in inventory.items():
             if "paths" in value and machine in value["machines"]:
@@ -111,23 +111,25 @@ def main() -> None:
 
     args = parse_args()
 
-    if args.command == "machines":
-        get_machines(inventory)
+    # if args.command == "machines":
+    #     get_machines(inventory)
+    #
+    # elif args.command == "tags":
+    #     get_tags(inventory, args.machine)
+    #
+    # elif args.command == "paths":
+    #     get_paths(inventory, args.machine, *args.tags)
+    #
+    # elif args.command == "links":
+    #     get_links(inventory, args.machine)
+    #
+    # elif args.command == "packages":
+    #     get_packages(inventory, args.machine, args.package_manager)
+    #
+    # elif args.command == "package_managers":
+    #     get_package_managers(inventory, args.machine)
 
-    elif args.command == "tags":
-        get_tags(inventory, args.machine)
-
-    elif args.command == "paths":
-        get_paths(inventory, args.machine, *args.tags)
-
-    elif args.command == "links":
-        get_links(inventory, args.machine)
-
-    elif args.command == "packages":
-        get_packages(inventory, args.machine, args.package_manager)
-
-    elif args.command == "package_managers":
-        get_package_managers(inventory, args.machine)
+    get_paths(inventory, "wsl", "resolv")
 
 
 if __name__ == "__main__":
