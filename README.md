@@ -10,11 +10,11 @@ Declarative infrastructure for personal configuration management system
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-YAML                             1              0              0            524
+YAML                             1              0              0            525
 Python                           1             43              3             86
 Markdown                         1              8              4             22
 -------------------------------------------------------------------------------
-SUM:                             3             51              7            632
+SUM:                             3             51              7            633
 -------------------------------------------------------------------------------
 ```
 <!-- CODE_STATISTICS_END -->
@@ -25,9 +25,9 @@ SUM:                             3             51              7            632
 
 ```
 inventory
-|-- README.md
-|-- inventory.yaml
-`-- parser.py
+├── inventory.yaml
+├── parser.py
+└── README.md
 
 1 directory, 3 files
 ```

@@ -87,6 +87,7 @@ machines:
         - dos2unix
       pip3:
         - pyyaml
+        - ipdb
   pi:
     package_managers:
       apt:
