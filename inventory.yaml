@@ -356,7 +356,7 @@ icons:
     - wsl
   paths:
     - /home/master/icons
-kakoune:
+kak:
   machines:
     - wsl
   links:
