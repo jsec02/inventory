@@ -22,6 +22,7 @@ def parse_args() -> argparse.Namespace:
 
     paths = subparsers.add_parser("paths")
     paths.add_argument("machine")
+    paths.add_argument("tags", nargs="*")
 
     links = subparsers.add_parser("links")
     links.add_argument("machine")
@@ -54,20 +55,21 @@ def get_tags(inventory: dict, machine: str) -> None:
             print(key, sudo)
 
 
-def get_paths(inventory: dict, machine: str, tag=None) -> None:
+def get_paths(inventory: dict, machine: str, *tags: str) -> None:
     if machine not in inventory["machines"]:
         print(f"Unknown machine: {machine}", file=sys.stderr)
         sys.exit(1)
 
-    if tag is None:
+    if tags:
+        for tag in tags:
+            if tag not in inventory or "paths" not in inventory[tag]:
+                print(f"Unknown tag: {tag}", file=sys.stderr)
+                sys.exit(1)
+            print(*inventory[tag]["paths"])
+    else:
         for key, value in inventory.items():
             if "paths" in value and machine in value["machines"]:
                 print(key, *value["paths"])
-    else:
-        if tag not in inventory or "paths" not in inventory[tag]:
-            print(f"Unknown tag: {tag}", file=sys.stderr)
-            sys.exit(1)
-        print(*inventory[tag]["paths"])
 
 
 def get_links(inventory: dict, machine: str) -> None:
@@ -116,7 +118,7 @@ def main() -> None:
         get_tags(inventory, args.machine)
 
     elif args.command == "paths":
-        get_paths(inventory, args.machine)
+        get_paths(inventory, args.machine, *args.tags)
 
     elif args.command == "links":
         get_links(inventory, args.machine)
