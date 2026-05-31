@@ -111,25 +111,23 @@ def main() -> None:
 
     args = parse_args()
 
-    # if args.command == "machines":
-    #     get_machines(inventory)
-    #
-    # elif args.command == "tags":
-    #     get_tags(inventory, args.machine)
-    #
-    # elif args.command == "paths":
-    #     get_paths(inventory, args.machine, *args.tags)
-    #
-    # elif args.command == "links":
-    #     get_links(inventory, args.machine)
-    #
-    # elif args.command == "packages":
-    #     get_packages(inventory, args.machine, args.package_manager)
-    #
-    # elif args.command == "package_managers":
-    #     get_package_managers(inventory, args.machine)
+    if args.command == "machines":
+        get_machines(inventory)
 
-    get_paths(inventory, "wsl", "resolv")
+    elif args.command == "tags":
+        get_tags(inventory, args.machine)
+
+    elif args.command == "paths":
+        get_paths(inventory, args.machine, *args.tags)
+
+    elif args.command == "links":
+        get_links(inventory, args.machine)
+
+    elif args.command == "packages":
+        get_packages(inventory, args.machine, args.package_manager)
+
+    elif args.command == "package_managers":
+        get_package_managers(inventory, args.machine)
 
 
 if __name__ == "__main__":
