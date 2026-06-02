@@ -242,6 +242,7 @@ machines:
         - wpscan
         - yq
         - zaproxy
+        - samba
       pip2:
         - impacket
       pip3:
