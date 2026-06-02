@@ -139,7 +139,6 @@ machines:
         - yt-dlp
         - zip
         - zsh
-        - atuin
       pip3:
         - glances[web]
         - pyyaml
@@ -243,7 +242,6 @@ machines:
         - wpscan
         - yq
         - zaproxy
-        - atuin
       pip2:
         - impacket
       pip3:
