@@ -492,9 +492,3 @@ sudo:
   paths:
     - /etc/sudoers.d/mksym
   sudo: true
-test:
-  machines:
-    - wsl
-    - kali
-  links:
-    /home/master/dotfiles/test: /home/master/.config/test
