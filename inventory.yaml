@@ -274,8 +274,6 @@ atuin:
     - kali
   links:
     /home/master/dotfiles/atuin: /home/master/.config/atuin
-  paths:
-    - /home/master/.config/atuin
 autostart:
   machines:
     - kali
@@ -303,8 +301,6 @@ direnv:
     - kali
   links:
     /home/master/dotfiles/direnv: /home/master/.config/direnv
-  paths:
-    - /home/master/.config/direnv
 dotfiles:
   machines:
     - wsl
@@ -319,8 +315,6 @@ fzf:
     - kali
   links:
     /home/master/dotfiles/fzf: /home/master/.config/fzf
-  paths:
-    - /home/master/.config/fzf
 git:
   machines:
     - wsl
@@ -328,15 +322,11 @@ git:
     - kali
   links:
     /home/master/dotfiles/git/.gitconfig: /home/master/.gitconfig
-  paths:
-    - /home/master/.gitconfig
 helix:
   machines:
     - wsl
   links:
     /home/master/dotfiles/helix: /home/master/.config/helix
-  paths:
-    - /home/master/.config/helix
 history:
   machines:
     - wsl
@@ -349,8 +339,6 @@ homepage:
     - pi
   links:
     /home/master/dotfiles/homepage: /home/master/.config/homepage
-  paths:
-    - /home/master/.config/homepage
 icons:
   machines:
     - wsl
@@ -361,31 +349,23 @@ kak:
     - wsl
   links:
     /home/master/dotfiles/kak: /home/master/.config/kak
-  paths:
-    - /home/master/.config/kak
 lightdm:
   machines:
     - kali
   links:
     /home/master/dotfiles/lightdm/lightdm.conf: /etc/lightdm/lightdm.conf
-  paths:
-    - /etc/lightdm/lightdm.conf
   sudo: true
 navidrome:
   machines:
     - pi
   links:
     /home/master/dotfiles/navidrome: /etc/navidrome
-  paths:
-    - /etc/navidrome
   sudo: true
 networkmanager:
   machines:
     - kali
   links:
     /home/master/dotfiles/networkmanager/NetworkManager.conf: /etc/NetworkManager/NetworkManager.conf
-  paths:
-    - /etc/NetworkManager/NetworkManager.conf
   sudo: true
 nftables:
   machines:
@@ -402,8 +382,6 @@ nvim:
     - kali
   links:
     /home/master/dotfiles/nvim: /home/master/.config/nvim
-  paths:
-    - /home/master/.config/nvim
 poc:
   machines:
     - wsl
@@ -430,8 +408,6 @@ redshift:
     - kali
   links:
     /home/master/dotfiles/redshift: /home/master/.config/redshift
-  paths:
-    - /home/master/.config/redshift
 resolv:
   machines:
     - wsl
@@ -460,8 +436,6 @@ sqlite:
     - kali
   links:
     /home/master/dotfiles/sqlite/.sqliterc: /home/master/.sqliterc
-  paths:
-    - /home/master/.sqliterc
 vault:
   machines:
     - wsl
@@ -492,8 +466,6 @@ yazi:
     - kali
   links:
     /home/master/dotfiles/yazi: /home/master/.config/yazi
-  paths:
-    - /home/master/.config/yazi
 zellij:
   machines:
     - wsl
@@ -502,7 +474,6 @@ zellij:
   links:
     /home/master/dotfiles/zellij: /home/master/.config/zellij
   paths:
-    - /home/master/.config/zellij
     - /mnt/c/Users/master/AppData/Roaming/Zellij/config
 zsh:
   machines:
@@ -513,10 +484,6 @@ zsh:
     /home/master/dotfiles/zsh/.zshrc: /home/master/.zshrc
     /home/master/dotfiles/zsh/.zshenv: /home/master/.zshenv
     /home/master/dotfiles/zsh/.zshenv.local: /home/master/.zshenv.local
-  paths:
-    - /home/master/.zshrc
-    - /home/master/.zshenv
-    - /home/master/.zshenv.local
 sudo:
   machines:
     - wsl
