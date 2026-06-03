@@ -58,9 +58,12 @@ def get_tags(inventory: dict, machine: str) -> None:
 
 
 def get_linked_tags(inventory: dict) -> None:
-    for key, value in inventory.items():
-        if key != "machines" and "links" in value:
-            print(key)
+    tags = [
+        key
+        for key, value in inventory.items()
+        if key != "machines" and "links" not in value
+    ]
+    print(*tags)
 
 
 def get_paths(inventory: dict, machine: str, *tags: str) -> None:
