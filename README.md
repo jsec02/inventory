@@ -11,10 +11,10 @@ Declarative infrastructure for personal configuration management system
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 YAML                             1              0              0            501
-Python                           1             47              3             98
+Python                           1             47              3             95
 Markdown                         1              8              4             22
 -------------------------------------------------------------------------------
-SUM:                             3             55              7            621
+SUM:                             3             55              7            618
 -------------------------------------------------------------------------------
 ```
 <!-- CODE_STATISTICS_END -->
