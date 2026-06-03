@@ -20,6 +20,8 @@ def parse_args() -> argparse.Namespace:
     tags = subparsers.add_parser("tags")
     tags.add_argument("machine")
 
+    subparsers.add_parser("linked_tags")
+
     paths = subparsers.add_parser("paths")
     paths.add_argument("machine")
     paths.add_argument("tags", nargs="*")
@@ -53,6 +55,12 @@ def get_tags(inventory: dict, machine: str) -> None:
         if key != "machines" and machine in value["machines"]:
             sudo = "true" if value.get("sudo") else "false"
             print(key, sudo)
+
+
+def get_linked_tags(inventory: dict) -> None:
+    for key, value in inventory.items():
+        if key != "machines" and "links" in value:
+            print(key)
 
 
 def get_paths(inventory: dict, machine: str, *tags: str) -> None:
@@ -116,6 +124,9 @@ def main() -> None:
 
     elif args.command == "tags":
         get_tags(inventory, args.machine)
+
+    elif args.command == "linked_tags":
+        get_linked_tags(inventory)
 
     elif args.command == "paths":
         get_paths(inventory, args.machine, *args.tags)
