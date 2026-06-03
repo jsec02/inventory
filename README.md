@@ -1,6 +1,6 @@
 ### inventory
 
-Declarative infrastructure for personal configuration management system
+Declarative infrastructure and source of truth for personal configuration management system
 
 <!-- CODE_STATISTICS_START -->
 
