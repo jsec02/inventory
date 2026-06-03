@@ -243,6 +243,7 @@ machines:
         - yq
         - zaproxy
         - samba
+        - smbmap
       pip2:
         - impacket
       pip3:
