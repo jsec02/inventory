@@ -244,6 +244,7 @@ machines:
         - zaproxy
         - samba
         - smbmap
+        - bloodhound
       pip2:
         - impacket
       pip3:
