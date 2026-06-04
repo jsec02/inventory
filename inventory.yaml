@@ -247,6 +247,7 @@ machines:
         - bloodhound
         - bloodhound.py
         - mdbtools
+        - pst-utils
       pip2:
         - impacket
       pip3:
