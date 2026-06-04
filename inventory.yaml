@@ -246,6 +246,7 @@ machines:
         - smbmap
         - bloodhound
         - bloodhound.py
+        - mdbtools
       pip2:
         - impacket
       pip3:
