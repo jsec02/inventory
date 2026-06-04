@@ -245,6 +245,7 @@ machines:
         - samba
         - smbmap
         - bloodhound
+        - bloodhound.py
       pip2:
         - impacket
       pip3:
