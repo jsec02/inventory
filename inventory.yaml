@@ -248,6 +248,7 @@ machines:
         - bloodhound.py
         - mdbtools
         - pst-utils
+        - powersploit
       pip2:
         - impacket
       pip3:
