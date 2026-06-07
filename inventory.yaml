@@ -249,6 +249,7 @@ machines:
         - mdbtools
         - pst-utils
         - powersploit
+        - gdb
       pip2:
         - impacket
       pip3:
