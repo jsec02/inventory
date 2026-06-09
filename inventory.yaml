@@ -250,6 +250,7 @@ machines:
         - pst-utils
         - powersploit
         - gdb
+        - irssi
       pip2:
         - impacket
       pip3:
