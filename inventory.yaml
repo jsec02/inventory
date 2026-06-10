@@ -253,6 +253,8 @@ machines:
         - irssi
         - steghide
         - aha
+        - ltrace
+        - strace
       pip2:
         - impacket
       pip3:
