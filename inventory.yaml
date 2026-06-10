@@ -251,6 +251,7 @@ machines:
         - powersploit
         - gdb
         - irssi
+        - steghide
       pip2:
         - impacket
       pip3:
