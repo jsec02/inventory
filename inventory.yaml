@@ -255,6 +255,7 @@ machines:
         - aha
         - ltrace
         - strace
+        - ghidra
       pip2:
         - impacket
       pip3:
