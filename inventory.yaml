@@ -367,14 +367,14 @@ lightdm:
 navidrome:
   machines:
     - pi
-  links:
-    /home/master/dotfiles/navidrome: /etc/navidrome
+  paths:
+    - /etc/navidrome
   sudo: true
 networkmanager:
   machines:
     - kali
-  links:
-    /home/master/dotfiles/networkmanager/NetworkManager.conf: /etc/NetworkManager/NetworkManager.conf
+  paths:
+    - /etc/NetworkManager/NetworkManager.conf
   sudo: true
 nftables:
   machines:
