@@ -252,6 +252,7 @@ machines:
         - gdb
         - irssi
         - steghide
+        - aha
       pip2:
         - impacket
       pip3:
