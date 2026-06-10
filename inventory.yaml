@@ -346,8 +346,8 @@ history:
 homepage:
   machines:
     - pi
-  links:
-    /home/master/dotfiles/homepage: /home/master/.config/homepage
+  paths:
+    - /home/master/.config/homepage
 icons:
   machines:
     - wsl
@@ -361,8 +361,8 @@ kak:
 lightdm:
   machines:
     - kali
-  links:
-    /home/master/dotfiles/lightdm/lightdm.conf: /etc/lightdm/lightdm.conf
+  paths:
+    - /etc/lightdm/lightdm.conf
   sudo: true
 navidrome:
   machines:
