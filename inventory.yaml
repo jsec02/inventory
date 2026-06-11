@@ -503,5 +503,6 @@ sudo:
     - pi
     - kali
   paths:
+    - /etc/sudoers
     - /etc/sudoers.d/mksym
   sudo: true
