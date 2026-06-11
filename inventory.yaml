@@ -256,6 +256,7 @@ machines:
         - ltrace
         - strace
         - ghidra
+        - php-curl
       pip2:
         - impacket
       pip3:
