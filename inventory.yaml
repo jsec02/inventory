@@ -257,6 +257,7 @@ machines:
         - strace
         - ghidra
         - php-curl
+        - netexec
       pip2:
         - impacket
       pip3:
