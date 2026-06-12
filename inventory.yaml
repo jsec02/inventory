@@ -259,6 +259,7 @@ machines:
         - ghidra
         - php-curl
         - netexec
+        - cmatrix
       pip2:
         - impacket
       pip3:
