@@ -139,6 +139,7 @@ machines:
         - yt-dlp
         - zip
         - zsh
+        - cmatrix
       pip3:
         - glances[web]
         - pyyaml
