@@ -260,6 +260,7 @@ machines:
         - php-curl
         - netexec
         - cmatrix
+        - hollywood
       pip2:
         - impacket
       pip3:
