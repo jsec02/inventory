@@ -261,6 +261,7 @@ machines:
         - netexec
         - cmatrix
         - hollywood
+        - gowitness
       pip2:
         - impacket
       pip3:
