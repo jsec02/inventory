@@ -262,6 +262,7 @@ machines:
         - cmatrix
         - hollywood
         - gowitness
+        - cifs-utils
       pip2:
         - impacket
       pip3:
