@@ -264,6 +264,7 @@ machines:
         - gowitness
         - cifs-utils
         - guestmount
+        - libguestfs-tools
       pip2:
         - impacket
       pip3:
