@@ -263,6 +263,7 @@ machines:
         - hollywood
         - gowitness
         - cifs-utils
+        - guestmount
       pip2:
         - impacket
       pip3:
