@@ -516,3 +516,9 @@ sudo:
     - /etc/sudoers
     - /etc/sudoers.d/mksym
   sudo: true
+mariadb:
+  machines:
+    - wsl
+  paths:
+    - /etc/my.cnf.d/server.cnf
+  sudo: true
