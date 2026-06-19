@@ -85,6 +85,7 @@ machines:
         - arm-none-eabi-newlib
         - dfu-util
         - dos2unix
+        - mariadb
       pip3:
         - pyyaml
         - ipdb
