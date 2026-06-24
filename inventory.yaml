@@ -516,3 +516,9 @@ sudo:
     - /etc/sudoers
     - /etc/sudoers.d/mksym
   sudo: true
+sysctl:
+  machines:
+    - pi
+  paths:
+    - /etc/sysctl.d/99-ipv6.conf
+  sudo: true
