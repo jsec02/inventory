@@ -268,6 +268,7 @@ machines:
         - libguestfs-tools
       pip2:
         - impacket
+        - termcolor
       pip3:
         - requests
         - pyyaml
