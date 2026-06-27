@@ -266,6 +266,7 @@ machines:
         - cifs-utils
         - guestmount
         - libguestfs-tools
+        - checksec
       pip2:
         - impacket
         - termcolor
