@@ -524,3 +524,8 @@ sysctl:
   paths:
     - /etc/sysctl.d/99-ipv6.conf
   sudo: true
+bin:
+  machines:
+    - kali
+  paths:
+    - /home/master/bin
