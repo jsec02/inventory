@@ -275,6 +275,7 @@ machines:
         - pyyaml
         - ipdb
         - telnetlib3
+        - pwn
 ssh:
   machines:
     - wsl
