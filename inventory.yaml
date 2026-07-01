@@ -301,6 +301,8 @@ atuin:
     - kali
   links:
     /home/master/dotfiles/atuin: /home/master/.config/atuin
+  paths:
+    - /mnt/c/Users/master/.config/atuin/config.toml
 autostart:
   machines:
     - kali
@@ -361,6 +363,7 @@ history:
     - kali
   paths:
     - /home/master/.local/share/atuin/history.db
+    - /mnt/c/Users/master/.local/share/atuin/history.db
 homepage:
   machines:
     - pi
