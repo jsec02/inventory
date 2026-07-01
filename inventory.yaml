@@ -484,7 +484,7 @@ wsl:
     - /etc/wsl.conf
     - /mnt/c/Users/master/.wslconfig
   sudo: true
-wt:
+windows-terminal:
   machines:
     - wsl
   paths:
@@ -534,3 +534,8 @@ bin:
     - kali
   paths:
     - /home/master/bin
+powershell-profile:
+  machines:
+    - wsl
+  paths:
+    - /mnt/c/Users/master/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
