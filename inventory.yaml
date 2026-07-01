@@ -276,6 +276,7 @@ machines:
         - ipdb
         - telnetlib3
         - pwn
+        - pypykatz
 ssh:
   machines:
     - wsl
